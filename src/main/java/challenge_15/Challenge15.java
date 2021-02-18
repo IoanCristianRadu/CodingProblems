@@ -10,12 +10,12 @@ import java.util.stream.Collectors;
 class Challenge15 {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.BruteForce(new int[]{-1, 0, 1, 2, -1, -4}));
+        System.out.println(solution.bruteForce(new int[]{-1, 0, 1, 2, -1, -4}));
     }
 }
 
 class Solution {
-    public List<List<Integer>> BruteForce(int[] numbers) {
+    public List<List<Integer>> bruteForce(int[] numbers) {
         List<List<Integer>> solution = new ArrayList<>();
 
         if (numbers.length < 3) {
@@ -31,7 +31,7 @@ class Solution {
                         solutionSet.add(numbers[i]);
                         solutionSet.add(numbers[j]);
                         solutionSet.add(numbers[k]);
-                        solutionSet.sort((a, b) -> a - b);
+                        solutionSet.sort(Comparator.comparingInt(a -> a));
                         solution.add(solutionSet);
                     }
                 }
