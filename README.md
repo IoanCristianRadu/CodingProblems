@@ -1,2 +1,3 @@
 # CodingProblems
-My solutions to the problems from www.leetcode.com
+
+My solutions to some coding challenges on www.leetcode.com
